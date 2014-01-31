@@ -1,13 +1,17 @@
 #-
 Symbols c, z, e;
+
 Indices i, r;
 Indices mu, nu, rho, sigma;
 Indices a, b;
 Indices A, B, C, D, E;
+
 Vectors p, q, k;
+
 Tensors f,T;
 
 Function u, uBar, v, vBar;
+
 CFunction epsilon, epsilonStar;
 CFunction denom; 
 
@@ -59,7 +63,7 @@ Function photonOut;
 
 * fermionPropagator(Index i, Vector p, Symbol m)
 *   i: Index for the gamma trace (as in g_(i, ...))
-*   p: Momentum of the lepton
+*   p: Momentum of the fermion
 *   m: Mass of the lepton
 Function fermionPropagator;
 
@@ -75,7 +79,7 @@ Function photonPropagator
 
 * fermionPhotonVertex(Index i, Symbol c, Index mu)
 *   i:  Index for the gamma trace (as in g_(i, ...))
-*   c:  Charge of the lepton
+*   c:  Charge of the fermion
 *   mu: Lorentz-index of the vertex
 Function fermionPhotonVertex;
 
