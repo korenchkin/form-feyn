@@ -1,8 +1,16 @@
 #procedure feyn
 
-*QED
+*   ___  _____ ____
+*  / _ \| ____|  _ \ 
+* | | | |  _| | | | |
+* | |_| | |___| |_| |
+*  \__\_\_____|____/ 
+*
 
-* External lines
+**********************
+*   EXTERNAL LINES   *
+**********************
+
 Identify leptonIn(p?, r?) = u(p,r);
 Identify leptonOut(p?, r?) = uBar(p,r);
 
@@ -12,22 +20,40 @@ Identify antiLeptonOut(p?, r?) = v(p,r);
 Identify photonIn(p?, r?, mu?) = epsilon(p,r,mu);
 Identify photonOut(p?, r?, mu?) = epsilonStar(p,r,mu);
 
-* Propagators
+*******************
+*   PROPAGATORS   *
+*******************
+
 Identify fermionPropagator(i?,p?,m?) = i_*(g_(i,p)+m*gi_(i)) / denom(p.p-m^2);
 Identify photonPropagator(p?,z?,mu?,nu?) = -i_*(d_(mu,nu)/denom(k.k)-(1-z)*p(mu)*p(nu)/(p.p)^2);
 
-* Vertex
+**************
+*   VERTEX   *
+**************
+
 Identify fermionPhotonVertex(i?,c?,mu?) = -i_*e*c*g_(i,mu);
 
 
-* QCD
+*   ___   ____ ____
+*  / _ \ / ___|  _ \
+* | | | | |   | | | |
+* | |_| | |___| |_| |
+*  \__\_\\____|____/
+*
 
-* Propagators
+*******************
+*   PROPAGATORS   *
+*******************
+
 Identify gluonPropagator(k?,A?,mu?,B?,nu?,z?) = i_*d_(A,B)/k.k*(-d_(mu,nu)+(1-z)*k(mu)*k(nu)/k.k);
 
 Identify ghostPropagator(k?,A?,B?) = i_*d_(A,B)/k.k;
 
-* Vertices
+
+****************
+*   VERTICES   *
+****************
+
 Identify quarkGluonVertex(c?,A?,a?,b?,i?,mu?) = i_*c*T(A,a,b)*g_(i,mu);
 Identify tripleGluonVertex(c?, p?,A?,mu?, k?,B?,nu?, q?,C?,rho?)
 	= c*f(A,B,C)*((k(rho)-p(rho))*d_(mu,nu) + (p(mu)-q(mu))*d_(nu,rho) + (q(nu)-k(nu))*d_(rho,mu));
