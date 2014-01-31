@@ -14,7 +14,44 @@ CFunction denom;
 *  \__\_\_____|____/ 
 *
 
-Function fermionIn, fermionOut, antiFermionIn, antiFermionOut, photonIn, photonOut;
+**********************
+*   EXTERNAL LINES   *
+**********************
+
+* fermionIn(p, r)
+*   p: Momentum of the fermion
+*   r: Spin of the fermion
+Function fermionIn;
+
+* fermionOut(p, r)
+*   p: Momentum of the fermion
+*   r: Spin of the fermion
+Function fermionOut;
+
+* antiFermionIn(p, r)
+*   p: Momentum of the anti fermion
+*   r: Spin of the anti fermion
+Function antiFermionIn;
+
+* antiFermionOut(p, r)
+*   p: Momentum of the anti fermion
+*   r: Spin of the anti fermion
+Function antiFermionOut;
+
+* photonIn(p, r)
+*   p: Momentum of the photon
+*   r: Polarization of the photon
+*   mu: Lorentz index of the photon
+Function photonIn;
+
+* photonOut(p, r)
+*   p: Momentum of the photon
+*   r: Polarization of the photon
+Function photonOut;
+
+*******************
+*   PROPAGATORS   *
+*******************
 
 * fermionPropagator(Index i, Vector p, Symbol m)
 *   i: Index for the gamma trace (as in g_(i, ...))
@@ -27,6 +64,10 @@ Function fermionPropagator;
 *   z: gauge zeta
 *   mu, nu: Lorentz-indices of the propagator
 Function photonPropagator
+
+**************
+*   VERTEX   *
+**************
 
 * QEDVertex(Index i, Symbol c, Index mu)
 *   i: Index for the gamma trace (as in g_(i, ...))
