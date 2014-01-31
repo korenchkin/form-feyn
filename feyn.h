@@ -39,8 +39,8 @@ Function antiFermionIn;
 Function antiFermionOut;
 
 * photonIn(p, r)
-*   p: Momentum of the photon
-*   r: Polarization of the photon
+*   p:  Momentum of the photon
+*   r:  Polarization of the photon
 *   mu: Lorentz index of the photon
 Function photonIn;
 
@@ -60,8 +60,8 @@ Function photonOut;
 Function fermionPropagator;
 
 * photonPropagator(Vector p, Symbol z, Index mu, Index nu)
-*   p: Momentum of the photon
-*   z: gauge zeta
+*   p:      Momentum of the photon
+*   z:      Gauge zeta
 *   mu, nu: Lorentz-indices of the propagator
 Function photonPropagator
 
@@ -70,8 +70,8 @@ Function photonPropagator
 **************
 
 * QEDVertex(Index i, Symbol c, Index mu)
-*   i: Index for the gamma trace (as in g_(i, ...))
-*   c: Charge of the fermion
+*   i:  Index for the gamma trace (as in g_(i, ...))
+*   c:  Charge of the fermion
 *   mu: Lorentz-index of the vertex
 Function QEDVertex;
 
