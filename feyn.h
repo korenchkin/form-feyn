@@ -1,7 +1,11 @@
 #-
-Symbols c,z,e;
-Indices i, r, mu, nu;
-Vectors p;
+Symbols c, z, e;
+Indices i, r;
+Indices mu, nu, rho, sigma;
+Indices a, b;
+Indices A, B, C, D, E;
+Vectors p, q, k;
+Tensors f,T;
 
 Function u, uBar, v, vBar;
 CFunction epsilon, epsilonStar;
@@ -74,6 +78,42 @@ Function photonPropagator
 *   c:  Charge of the fermion
 *   mu: Lorentz-index of the vertex
 Function QEDVertex;
+
+
+*   ___   ____ ____
+*  / _ \ / ___|  _ \
+* | | | | |   | | | |
+* | |_| | |___| |_| |
+*  \__\_\\____|____/
+*
+
+
+****************
+*   VERTICES   *
+****************
+
+* bosonFermionVertex(Symbol g, Index A, Index a, Index b, Index i, Index mu)
+*   g:   Coupling constant
+*   A:   Color index of the gauge boson
+*   a,b: Color indices of the fermions
+*   i:   Index for the gamma trace (as in g_(i, ...))
+*   mu:  Lorentz index of the gauge boson
+Function bosonFermionVertex;
+
+* bosonTripleVertex(Symbol g, Vector p, Index A, Index mu, Vector k,
+*                   Index B, Index nu, Vector q, Index C, Index rho)
+*   g:         Coupling constant
+*   p,k,q:     Momenta of the gauge bosons
+*   A,B,C:     Color of the gauge bosons
+*   mu,nu,rho: Lorentz indices of the gauge bosons
+Function bosonTripleVertex;
+
+* bosonQuadrupleVertex(Symbol g, Index A, Index mu, Index B, Index nu,
+*                      Index C, Index rho, Index D, Index signa)
+*   g:               Coupling constant
+*   A,B,C,D:         Color of the gauge bosons
+*   mu,nu,rho,sigma: Lorentz indices of the gauge bosons
+Function bosonQuadrupleVertex;
 
 * vim:ft=form
 #+
