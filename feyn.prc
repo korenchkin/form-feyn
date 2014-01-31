@@ -22,6 +22,13 @@ Identify QEDVertex(i?,c?,mu?) = -i_*e*c*g_(i,mu);
 
 * QCD
 
+* Propagators
+Identify quarkPropagator(p?,m?,a?,b?,i?) = i_*d_(a,b)*(g_(i,p)+m*gi_(i))*denom(p.p-m^2);
+
+Identify gluonPropagator(k?,A?,mu?,B?,nu?,z?) = i_*d_(A,B)/k.k*(-d_(mu,nu)+(1-z)*k(mu)*k(nu)/k.k);
+
+Identify ghostPropagator(k?,A?,B?) = i_*d_(A,B)/k.k;
+
 * Vertices
 Identify quarkGluonVertex(c?,A?,a?,b?,i?,mu?) = i_*c*T(A,a,b)*g_(i,mu);
 Identify tripleGluonVertex(c?, p?,A?,mu?, k?,B?,nu?, q?,C?,rho?)

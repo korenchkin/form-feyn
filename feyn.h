@@ -87,6 +87,29 @@ Function QEDVertex;
 *  \__\_\\____|____/
 *
 
+*******************
+*   PROPAGATORS   *
+*******************
+
+* quarkPropagator(Vector p, Symbol m, Index a, Index b, Index i)
+*   p:   Momentum of the quark
+*   m:   Mass of the quark
+*   a,b: Color of the quark at each vertex
+*   i:   Index for the gamma trace (as in g_(i, ...))
+Function quarkPropagator;
+
+* gluonPropagator(Vector k, Index A, Index mu, Index B, Index nu, Symbol z)
+*   k: Momentum of the gluon
+*   A,B: Color of the gluon at each vertex
+*   mu,nu: Lorentz indices of the gluon at each vertex
+*   z: Gauge fixing
+Function gluonPropagator;
+
+* ghostPropagator(Vector k, Index A, Index B)
+*   k: Momentum of the ghost
+*   A,B: Color of the ghost at each vertex
+Function ghostPropagator;
+
 
 ****************
 *   VERTICES   *
