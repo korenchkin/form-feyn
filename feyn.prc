@@ -6,3 +6,5 @@ Identify photonPropagator(p?,z?,mu?,nu?) = -i_*(d_(mu,nu)/denom(k.k)-(1-z)*p(mu)
 Identify QEDVertex(i?,c?,mu?) = -i_*e*c*g_(i,mu);
 
 #endprocedure
+
+* vim:ft=form
