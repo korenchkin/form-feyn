@@ -1,6 +1,13 @@
 #-
 Symbols c, z, e;
 
+*******************************************************************
+*                                                                 *
+*                           WARNING:                              *
+*            Do *NOT* use the indices as defined here!            *
+*        Define them yourself with the correct dimensions!        *
+*                                                                 *
+*******************************************************************
 Indices i, r;
 Indices mu, nu, rho, sigma;
 Indices a, b;
