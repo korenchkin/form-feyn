@@ -1,8 +1,10 @@
 #-
 Symbols c,z,e;
-Indices i, mu, nu;
+Indices i, r, mu, nu;
 Vectors p;
 
+Function u, uBar, v, vBar;
+CFunction epsilon, epsilonStar;
 CFunction denom; 
 
 *   ___  _____ ____
@@ -12,7 +14,7 @@ CFunction denom;
 *  \__\_\_____|____/ 
 *
 
-Function fermionIn, fermionOut, antiFermionIn, antiFermionOut, photon;
+Function fermionIn, fermionOut, antiFermionIn, antiFermionOut, photonIn, photonOut;
 
 * fermionPropagator(Index i, Vector p, Symbol m)
 *   i: Index for the gamma trace (as in g_(i, ...))
