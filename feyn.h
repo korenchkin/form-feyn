@@ -57,11 +57,11 @@ Function photonOut;
 *   PROPAGATORS   *
 *******************
 
-* leptonPropagator(Index i, Vector p, Symbol m)
+* fermionPropagator(Index i, Vector p, Symbol m)
 *   i: Index for the gamma trace (as in g_(i, ...))
 *   p: Momentum of the lepton
 *   m: Mass of the lepton
-Function leptonPropagator;
+Function fermionPropagator;
 
 * photonPropagator(Vector p, Symbol z, Index mu, Index nu)
 *   p:      Momentum of the photon
@@ -73,11 +73,11 @@ Function photonPropagator
 *   VERTEX   *
 **************
 
-* QEDVertex(Index i, Symbol c, Index mu)
+* fermionPhotonVertex(Index i, Symbol c, Index mu)
 *   i:  Index for the gamma trace (as in g_(i, ...))
 *   c:  Charge of the lepton
 *   mu: Lorentz-index of the vertex
-Function QEDVertex;
+Function fermionPhotonVertex;
 
 
 *   ___   ____ ____
@@ -91,23 +91,14 @@ Function QEDVertex;
 *   PROPAGATORS   *
 *******************
 
-* quarkPropagator(Vector p, Symbol m, Index a, Index b, Index i)
-*   p:   Momentum of the quark
-*   m:   Mass of the quark
-*   a,b: Color of the quark at each vertex
-*   i:   Index for the gamma trace (as in g_(i, ...))
-Function quarkPropagator;
-
-* gluonPropagator(Vector k, Index A, Index mu, Index B, Index nu, Symbol z)
+* gluonPropagator(Vector k, Index mu, Index nu, Symbol z)
 *   k: Momentum of the gluon
-*   A,B: Color of the gluon at each vertex
 *   mu,nu: Lorentz indices of the gluon at each vertex
 *   z: Gauge fixing
 Function gluonPropagator;
 
-* ghostPropagator(Vector k, Index A, Index B)
+* ghostPropagator(Vector k)
 *   k: Momentum of the ghost
-*   A,B: Color of the ghost at each vertex
 Function ghostPropagator;
 
 

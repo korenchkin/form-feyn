@@ -13,18 +13,16 @@ Identify photonIn(p?, r?, mu?) = epsilon(p,r,mu);
 Identify photonOut(p?, r?, mu?) = epsilonStar(p,r,mu);
 
 * Propagators
-Identify leptonPropagator(i?,p?,m?) = i_*(g_(i,p)+m*gi_(i)) / denom(p.p-m^2);
+Identify fermionPropagator(i?,p?,m?) = i_*(g_(i,p)+m*gi_(i)) / denom(p.p-m^2);
 Identify photonPropagator(p?,z?,mu?,nu?) = -i_*(d_(mu,nu)/denom(k.k)-(1-z)*p(mu)*p(nu)/(p.p)^2);
 
 * Vertex
-Identify QEDVertex(i?,c?,mu?) = -i_*e*c*g_(i,mu);
+Identify fermionPhotonVertex(i?,c?,mu?) = -i_*e*c*g_(i,mu);
 
 
 * QCD
 
 * Propagators
-Identify quarkPropagator(p?,m?,a?,b?,i?) = i_*d_(a,b)*(g_(i,p)+m*gi_(i))*denom(p.p-m^2);
-
 Identify gluonPropagator(k?,A?,mu?,B?,nu?,z?) = i_*d_(A,B)/k.k*(-d_(mu,nu)+(1-z)*k(mu)*k(nu)/k.k);
 
 Identify ghostPropagator(k?,A?,B?) = i_*d_(A,B)/k.k;
