@@ -32,6 +32,7 @@ Identify bosonQuadrupleVertex(c?, A?,mu?, B?,nu?, C?,rho?, D?,sigma?)
 	+ f(A,C,E)*f(B,D,E)*(d_(mu,nu)*d_(rho,sigma)-d_(mu,sigma)*d_(nu,rho))
 	+ f(A,D,E)*f(B,C,E)*(d_(mu,nu)*d_(rho,sigma)-d_(mu,rho)*d_(nu,sigma))
 	);
+Identify bosonGhostVertex(c?, A?, p?, B?, C?, mu?) = c*f(A,B,C)*p(mu);
 
 
 #endprocedure

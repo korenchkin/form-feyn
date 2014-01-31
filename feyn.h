@@ -115,5 +115,14 @@ Function bosonTripleVertex;
 *   mu,nu,rho,sigma: Lorentz indices of the gauge bosons
 Function bosonQuadrupleVertex;
 
+* bosonGhostVertex(Symbol g, Index A, Vector p, Index B, Index C, Index mu)
+*   g:  Coupling constant
+*   A:  Color of the outgoing ghost
+*   p:  Momentum of the outgoing ghost
+*   B:  Color of the ingoing ghost
+*   C:  Color of the gauge boson
+*   mu: Lorentz index of the gauge boson
+Function bosonGhostVertex;
+
 * vim:ft=form
 #+
