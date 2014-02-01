@@ -44,13 +44,13 @@ Do *NOT* use them, because they all have the standard dimension.
 `p`: Momentum of the antilepton  
 `r`: Spin of the lepton
 
-##### Ingoing photon
+##### Ingoing Photon
     photonIn(Vector p, Symbol r, Index mu)
 `p`:  Momentum of the photon  
 `r`:  Polarization of the photon  
 `mu`: Lorentz index of the photon
 
-##### Outgoing photon
+##### Outgoing Photon
     photonOut(Vector p, Symbol r, Index mu)
 `p`:  Momentum of the photon  
 `r`:  Polarization of the photon  
@@ -87,20 +87,20 @@ Do *NOT* use them, because they all have the standard dimension.
 
 #### Propagators
 
-#####  Gluon propagator
+#####  Gluon Propagator
     gluonPropagator(Vector k, Index mu, Index nu, Symbol z)
 `k`: Momentum of the gluon  
 `mu`,`nu`: Lorentz indices of the gluon at each vertex  
 `z`: Gauge fixing
 
-##### Ghost propagator
+##### Ghost Propagator
     ghostPropagator(Vector k)
 `k`: Momentum of the ghost
 
 
 #### Vertices
 
-##### Quark-gluon vertex
+##### Quark-Gluon Vertex
     quarkGluonVertex(Symbol g, Index A, Index a, Index b, Index i, Index mu)
 `g`:   Coupling constant  
 `A`:   Color index of the gluon  
@@ -108,20 +108,20 @@ Do *NOT* use them, because they all have the standard dimension.
 `i`:   Index for the gamma trace (as in `g_(i, ...)`)  
 `mu`:  Lorentz index of the gluon
 
-##### Triple gluon vertex
+##### Triple Gluon Vertex
     tripleGluonVertex(Symbol g, Vector p, Index A, Index mu, Vector k, Index B, Index nu, Vector q, Index C, Index rho)
 `g`:         Coupling constant  
 `p`,`k`,`q`:     Momenta of the gluons  
 `A`,`B`,`C`:     Color of the gluons  
 `mu`,`nu`,`rho`: Lorentz indices of the gluons  
 
-##### Quadruple gluon vertex
+##### Quadruple Gluon Vertex
     quadrupleGluonVertex(Symbol g, Index A, Index mu, Index B, Index nu, Index C, Index rho, Index D, Index signa)
 `g`:               Coupling constant  
 `A`,`B`,`C`,`D`:         Color of the gluons  
 `mu`,`nu`,`rho`,`sigma`: Lorentz indices of the gluons  
 
-##### Gluon-ghost vertex
+##### Gluon-Ghost Vertex
     gluonGhostVertex(Symbol g, Index A, Vector p, Index B, Index C, Index mu)
 `g`:  Coupling constant  
 `A`:  Color of the outgoing ghost  
