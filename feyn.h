@@ -34,35 +34,36 @@ CFunction epsilon, epsilonStar;
 *   EXTERNAL LINES   *
 **********************
 
-* leptonIn(p, r)
+* leptonIn(Vector p, Symbol r)
 *   p: Momentum of the lepton
 *   r: Spin of the lepton
 Function leptonIn;
 
-* leptonOut(p, r)
+* leptonOut(Vector p, Symbol r)
 *   p: Momentum of the lepton
 *   r: Spin of the lepton
 Function leptonOut;
 
-* antiLeptonIn(p, r)
+* antiLeptonIn(Vector p, Symbol r)
 *   p: Momentum of the anti lepton
 *   r: Spin of the anti lepton
 Function antiLeptonIn;
 
-* antiLeptonOut(p, r)
+* antiLeptonOut(Vector p, Symbol r)
 *   p: Momentum of the anti lepton
 *   r: Spin of the anti lepton
 Function antiLeptonOut;
 
-* photonIn(p, r)
+* photonIn(Vector p, Symbol r, Index mu)
 *   p:  Momentum of the photon
 *   r:  Polarization of the photon
 *   mu: Lorentz index of the photon
 Function photonIn;
 
-* photonOut(p, r)
+* photonOut(Vector p, Symbol r, Index mu)
 *   p: Momentum of the photon
 *   r: Polarization of the photon
+*   mu: Lorentz index of the photon
 Function photonOut;
 
 *******************
@@ -72,13 +73,13 @@ Function photonOut;
 * fermionPropagator(Index i, Vector p, Symbol m)
 *   i: Index for the gamma trace (as in g_(i, ...))
 *   p: Momentum of the fermion
-*   m: Mass of the lepton
+*   m: Mass of the fermion
 Function fermionPropagator;
 
 * photonPropagator(Vector p, Symbol z, Index mu, Index nu)
 *   p:      Momentum of the photon
 *   z:      Gauge zeta
-*   mu, nu: Lorentz-indices of the propagator
+*   mu, nu: Lorentz-indices at each vertex
 Function photonPropagator
 
 **************
