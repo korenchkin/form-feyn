@@ -1,5 +1,5 @@
 #-
-Symbols c, z, e;
+Symbols c, z, e, r;
 
 *******************************************************************
 *                                                                 *
@@ -10,7 +10,7 @@ Symbols c, z, e;
 *        Define your own indices with the correct dimensions!     *
 *                                                                 *
 *******************************************************************
-Indices dii, dir;
+Indices dii;
 Indices dimu, dinu, dirho, disigma;
 Indices dia ,dib;
 Indices diA, diB, diC, diD, diE;

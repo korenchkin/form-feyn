@@ -11,14 +11,14 @@
 *   EXTERNAL LINES   *
 **********************
 
-Identify leptonIn(p?, dir?) = u(p,dir);
-Identify leptonOut(p?, dir?) = uBar(p,dir);
+Identify leptonIn(p?, r?) = u(p,r);
+Identify leptonOut(p?, r?) = uBar(p,r);
 
-Identify antiLeptonIn(p?, dir?) = vBar(p,dir);
-Identify antiLeptonOut(p?, dir?) = v(p,dir);
+Identify antiLeptonIn(p?, r?) = vBar(p,r);
+Identify antiLeptonOut(p?, r?) = v(p,r);
 
-Identify photonIn(p?, dir?, dimu?) = epsilon(p,dir,dimu);
-Identify photonOut(p?, dir?, dimu?) = epsilonStar(p,dir,dimu);
+Identify photonIn(p?, r?, dimu?) = epsilon(p,r,dimu);
+Identify photonOut(p?, r?, dimu?) = epsilonStar(p,r,dimu);
 
 *******************
 *   PROPAGATORS   *
