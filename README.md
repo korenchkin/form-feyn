@@ -116,7 +116,7 @@ Do *NOT* use them, because they all have the standard dimension.
 `mu`,`nu`,`rho`: Lorentz indices of the gluons  
 
 ##### Quadruple Gluon Vertex
-    quadrupleGluonVertex(Symbol g, Index A, Index mu, Index B, Index nu, Index C, Index rho, Index D, Index signa)
+    quadrupleGluonVertex(Symbol g, Index A, Index mu, Index B, Index nu, Index C, Index rho, Index D, Index sigma)
 `g`:               Coupling constant  
 `A`,`B`,`C`,`D`:         Color of the gluons  
 `mu`,`nu`,`rho`,`sigma`: Lorentz indices of the gluons  
