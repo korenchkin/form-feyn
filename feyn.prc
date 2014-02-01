@@ -11,27 +11,27 @@
 *   EXTERNAL LINES   *
 **********************
 
-Identify leptonIn(p?, r?) = u(p,r);
-Identify leptonOut(p?, r?) = uBar(p,r);
+Identify leptonIn(p?, dir?) = u(p,dir);
+Identify leptonOut(p?, dir?) = uBar(p,dir);
 
-Identify antiLeptonIn(p?, r?) = vBar(p,r);
-Identify antiLeptonOut(p?, r?) = v(p,r);
+Identify antiLeptonIn(p?, dir?) = vBar(p,dir);
+Identify antiLeptonOut(p?, dir?) = v(p,dir);
 
-Identify photonIn(p?, r?, mu?) = epsilon(p,r,mu);
-Identify photonOut(p?, r?, mu?) = epsilonStar(p,r,mu);
+Identify photonIn(p?, dir?, dimu?) = epsilon(p,dir,dimu);
+Identify photonOut(p?, dir?, dimu?) = epsilonStar(p,dir,dimu);
 
 *******************
 *   PROPAGATORS   *
 *******************
 
-Identify fermionPropagator(i?,p?,m?) = i_*(g_(i,p)+m*gi_(i)) / denom(p.p-m^2);
-Identify photonPropagator(p?,z?,mu?,nu?) = -i_*(d_(mu,nu)/denom(k.k)-(1-z)*p(mu)*p(nu)/(p.p)^2);
+Identify fermionPropagator(dii?,p?,m?) = i_*(g_(dii,p)+m*gi_(dii)) / denom(p.p-m^2);
+Identify photonPropagator(p?,z?,dimu?,dinu?) = -i_*(d_(dimu,dinu)/denom(k.k)-(1-z)*p(dimu)*p(dinu)/(p.p)^2);
 
 **************
 *   VERTEX   *
 **************
 
-Identify fermionPhotonVertex(i?,c?,mu?) = -i_*e*c*g_(i,mu);
+Identify fermionPhotonVertex(dii?,c?,dimu?) = -i_*e*c*g_(dii,dimu);
 
 
 *   ___   ____ ____
@@ -45,25 +45,25 @@ Identify fermionPhotonVertex(i?,c?,mu?) = -i_*e*c*g_(i,mu);
 *   PROPAGATORS   *
 *******************
 
-Identify gluonPropagator(k?,A?,mu?,B?,nu?,z?) = i_*d_(A,B)/k.k*(-d_(mu,nu)+(1-z)*k(mu)*k(nu)/k.k);
+Identify gluonPropagator(k?,diA?,dimu?,diB?,dinu?,z?) = i_*d_(diA,diB)/k.k*(-d_(dimu,dinu)+(1-z)*k(dimu)*k(dinu)/k.k);
 
-Identify ghostPropagator(k?,A?,B?) = i_*d_(A,B)/k.k;
+Identify ghostPropagator(k?,diA?,diB?) = i_*d_(diA,diB)/k.k;
 
 
 ****************
 *   VERTICES   *
 ****************
 
-Identify quarkGluonVertex(c?,A?,a?,b?,i?,mu?) = i_*c*T(A,a,b)*g_(i,mu);
-Identify tripleGluonVertex(c?, p?,A?,mu?, k?,B?,nu?, q?,C?,rho?)
-	= c*f(A,B,C)*((k(rho)-p(rho))*d_(mu,nu) + (p(mu)-q(mu))*d_(nu,rho) + (q(nu)-k(nu))*d_(rho,mu));
-Identify quadrupleGluonVertex(c?, A?,mu?, B?,nu?, C?,rho?, D?,sigma?)
+Identify quarkGluonVertex(c?,diA?,dia?,dib?,dii?,dimu?) = i_*c*T(diA,dia,dib)*g_(dii,dimu);
+Identify tripleGluonVertex(c?, p?,diA?,dimu?, k?,diB?,dinu?, q?,diC?,dirho?)
+	= c*f(diA,diB,diC)*((k(dirho)-p(dirho))*d_(dimu,dinu) + (p(dimu)-q(dimu))*d_(dinu,dirho) + (q(dinu)-k(dinu))*d_(dirho,dimu));
+Identify quadrupleGluonVertex(c?, diA?,dimu?, diB?,dinu?, diC?,dirho?, diD?,disigma?)
 	= -i_*c^2*(
-	  f(A,B,E)*f(C,B,E)*(d_(mu,rho)*d_(nu,sigma)-d_(mu,sigma)*d_(nu,rho))
-	+ f(A,C,E)*f(B,D,E)*(d_(mu,nu)*d_(rho,sigma)-d_(mu,sigma)*d_(nu,rho))
-	+ f(A,D,E)*f(B,C,E)*(d_(mu,nu)*d_(rho,sigma)-d_(mu,rho)*d_(nu,sigma))
+	  f(diA,diB,diE)*f(diC,diB,diE)*(d_(dimu,dirho)*d_(dinu,disigma)-d_(dimu,disigma)*d_(dinu,dirho))
+	+ f(diA,diC,diE)*f(diB,diD,diE)*(d_(dimu,dinu)*d_(dirho,disigma)-d_(dimu,disigma)*d_(dinu,dirho))
+	+ f(diA,diD,diE)*f(diB,diC,diE)*(d_(dimu,dinu)*d_(dirho,disigma)-d_(dimu,dirho)*d_(dinu,disigma))
 	);
-Identify gluonGhostVertex(c?, A?, p?, B?, C?, mu?) = c*f(A,B,C)*p(mu);
+Identify gluonGhostVertex(c?, diA?, p?, diB?, diC?, dimu?) = c*f(diA,diB,diC)*p(dimu);
 
 
 #endprocedure

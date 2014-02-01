@@ -5,13 +5,15 @@ Symbols c, z, e;
 *                                                                 *
 *                           WARNING:                              *
 *            Do *NOT* use the indices as defined here!            *
-*        Define them yourself with the correct dimensions!        *
+*      They are dummy indices used as function arguments with     *
+*                       default dimension.                        *
+*        Define your own indices with the correct dimensions!     *
 *                                                                 *
 *******************************************************************
-Indices i, r;
-Indices mu, nu, rho, sigma;
-Indices a, b;
-Indices A, B, C, D, E;
+Indices dii, dir;
+Indices dimu, dinu, dirho, disigma;
+Indices dia ,dib;
+Indices diA, diB, diC, diD, diE;
 
 Vectors p, q, k;
 
