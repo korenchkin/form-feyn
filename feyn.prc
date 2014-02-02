@@ -25,7 +25,7 @@ Identify photonOut(p?, r?, dimu?) = epsilonStar(p,r,dimu);
 *******************
 
 Identify fermionPropagator(dii?,p?,m?) = i_*(g_(dii,p)+m*gi_(dii))/(p.p-m^2);
-Identify photonPropagator(p?,z?,dimu?,dinu?) = -i_*(d_(dimu,dinu)/(k.k)-(1-z)*p(dimu)*p(dinu)/(p.p)^2);
+Identify photonPropagator(p?,z?,dimu?,dinu?) = -i_*(d_(dimu,dinu)/(p.p)-(1-z)*p(dimu)*p(dinu)/(p.p)^2);
 
 **************
 *   VERTEX   *
