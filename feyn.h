@@ -23,6 +23,8 @@ Function u, uBar, v, vBar;
 
 CFunction epsilon, epsilonStar;
 
+CFunction denom;
+
 *   ___  _____ ____
 *  / _ \| ____|  _ \ 
 * | | | |  _| | | | |

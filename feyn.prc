@@ -24,8 +24,8 @@ Identify photonOut(p?, r?, dimu?) = epsilonStar(p,r,dimu);
 *   PROPAGATORS   *
 *******************
 
-Identify fermionPropagator(dii?,p?,m?) = i_*(g_(dii,p)+m*gi_(dii))/(p.p-m^2);
-Identify photonPropagator(p?,z?,dimu?,dinu?) = -i_*(d_(dimu,dinu)/(p.p)-(1-z)*p(dimu)*p(dinu)/(p.p)^2);
+Identify fermionPropagator(dii?,p?,m?) = i_*(g_(dii,p)+m*gi_(dii))*denom(p.p-m^2);
+Identify photonPropagator(p?,z?,dimu?,dinu?) = -i_*(d_(dimu,dinu)*denom(p.p)-(1-z)*p(dimu)*p(dinu)*denom((p.p)^2));
 
 **************
 *   VERTEX   *
@@ -45,9 +45,9 @@ Identify fermionPhotonVertex(dii?,c?,dimu?) = -i_*e*c*g_(dii,dimu);
 *   PROPAGATORS   *
 *******************
 
-Identify gluonPropagator(k?,diA?,dimu?,diB?,dinu?,z?) = i_*d_(diA,diB)/k.k*(-d_(dimu,dinu)+(1-z)*k(dimu)*k(dinu)/k.k);
+Identify gluonPropagator(k?,diA?,dimu?,diB?,dinu?,z?) = i_*d_(diA,diB)*denom(k.k)*(-d_(dimu,dinu)+(1-z)*k(dimu)*k(dinu)*denom(k.k));
 
-Identify ghostPropagator(k?,diA?,diB?) = i_*d_(diA,diB)/k.k;
+Identify ghostPropagator(k?,diA?,diB?) = i_*d_(diA,diB)*denom(k.k);
 
 
 ****************
